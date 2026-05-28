@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampung Naga - Wisata Digital</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&amp;family=Alegreya+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <style>
+        :root { --vh: 1vh; }
+        body { font-family: 'Alegreya Sans', sans-serif; }
+        h1,h2,h3,h4 { font-family: 'Alegreya', serif; }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(15,23,42,0.6) 0%, rgba(15,23,42,0.3) 50%, rgba(15,23,42,0.8) 100%); }
+        .nav-active { border-bottom: 2px solid #16a34a; }
+        .capacity-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{ opacity:1; } 50%{ opacity:0.6; } }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; opacity:0; }
+        @keyframes fadeIn { to { opacity:1; } }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+    </style>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+ <script src="/_sdk/telemetry_sdk.js"></script></head>
+ <body data-template-id="__page-root" class="w-full min-h-screen bg-stone-50" style="background: rgb(250, 250, 249);">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-stone-900/95 backdrop-blur-sm border-b border-stone-700">
+   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
+    <a href="#beranda" data-template-id="nav-brand" class="canva-text text-lg font-bold text-emerald-400" style="color: rgb(52, 211, 153); font-weight: 700; font-style: normal; font-size: 16px;">Kampung Naga</a>
+    <div class="hidden md:flex gap-6 text-sm">
+     <a href="#beranda" data-template-id="nav-home" class="canva-link text-stone-300 hover:text-emerald-400 transition" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Beranda</a> <a href="#virtual" data-template-id="nav-virtual" class="canva-link text-stone-300 hover:text-emerald-400 transition" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Naga Virtual</a> <a href="#booking" data-template-id="nav-booking" class="canva-link text-stone-300 hover:text-emerald-400 transition" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Pesan Kunjungan</a> <a href="#panduan" data-template-id="nav-panduan" class="canva-link text-stone-300 hover:text-emerald-400 transition" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Panduan Adat</a> <a href="#kriya" data-template-id="nav-kriya" class="canva-link text-stone-300 hover:text-emerald-400 transition" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Kriya Naga</a>
+    </div><button id="mobile-menu-btn" class="md:hidden text-stone-300"><i data-lucide="menu" style="width:24px;height:24px;"></i></button>
+   </div>
+   <div id="mobile-menu" class="hidden md:hidden bg-stone-900 px-4 pb-4 space-y-3">
+    <a href="#beranda" class="block text-stone-300 hover:text-emerald-400">Beranda</a> <a href="#virtual" class="block text-stone-300 hover:text-emerald-400">Naga Virtual</a> <a href="#booking" class="block text-stone-300 hover:text-emerald-400">Pesan Kunjungan</a> <a href="#panduan" class="block text-stone-300 hover:text-emerald-400">Panduan Adat</a> <a href="#kriya" class="block text-stone-300 hover:text-emerald-400">Kriya Naga</a>
+   </div>
+  </nav><!-- Hero Section -->
+  <section id="beranda" class="relative w-full" style="min-height: calc(100 * min(var(--vh, 1vh), 1vh));">
+   <img data-template-id="hero-image" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/1547429/pexels-photo-1547429.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920" alt="Aerial view of Rumpin's lush rice terraces and traditional village in Indonesia">
+   <div class="hero-overlay absolute inset-0"></div>
+   <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-20" style="min-height: calc(100 * min(var(--vh, 1vh), 1vh));">
+    <h1 data-template-id="hero-title" class="canva-text text-white text-5xl md:text-7xl font-extrabold drop-shadow-lg fade-in" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 32px;">Kampung Naga</h1>
+    <p data-template-id="hero-subtitle" class="canva-text text-stone-200 text-lg md:text-xl mt-4 max-w-2xl fade-in stagger-1" style="color: rgb(231, 229, 228); font-weight: 400; font-style: normal; font-size: 16px;">Jelajahi warisan budaya Sunda yang autentik — 444 anak tangga menuju peradaban yang menjaga tradisi leluhur sejak ratusan tahun silam.</p><!-- Capacity Monitor -->
+    <div class="mt-8 bg-stone-900/80 backdrop-blur rounded-2xl p-6 max-w-md w-full fade-in stagger-2">
+     <p data-template-id="capacity-label" class="canva-text text-stone-400 text-sm uppercase tracking-wider mb-2" style="color: rgb(168, 162, 158); font-weight: 400; font-style: normal; font-size: 16px;">Pengunjung Hari Ini</p>
+     <div class="flex items-center justify-center gap-4">
+      <span id="traffic-light" class="w-5 h-5 rounded-full bg-green-500 capacity-pulse"></span> <span id="visitor-count" class="text-3xl font-bold text-white">0</span> <span class="text-stone-400">/ 500</span>
+     </div>
+     <p id="capacity-status" class="text-emerald-400 text-sm mt-2">Kuota tersedia</p>
+    </div><a href="#booking" data-template-id="hero-cta" class="canva-button mt-8 inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-full transition fade-in stagger-3" style="background: rgb(22, 163, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Reservasi Kunjungan</a>
+   </div>
+  </section><!-- Naga Virtual Section -->
+  <section id="virtual" class="w-full py-20 px-4">
+   <div class="max-w-6xl mx-auto">
+    <h2 data-template-id="virtual-title" class="canva-text text-3xl md:text-4xl font-bold text-stone-800 text-center mb-4" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 24px;">Naga Virtual</h2>
+    <p data-template-id="virtual-desc" class="canva-text text-stone-600 text-center max-w-2xl mx-auto mb-12" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Jelajahi Kampung Naga dari mana saja. Pengalaman wisata digital untuk semua kalangan — lansia, anak-anak, dan penyandang disabilitas.</p><!-- Virtual Tour Preview -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+     <div class="rounded-2xl overflow-hidden shadow-xl card-hover">
+      <img data-template-id="virtual-stairs-img" class="canva-image w-full h-64 object-cover" loading="lazy" src="https://images.pexels.com/photos/21952599/pexels-photo-21952599.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A wooden staircase enveloped by dense tropical greenery in a serene garden setting">
+      <div data-template-id="virtual-stairs-card" class="canva-card p-6" style="background: rgb(255, 255, 255);">
+       <h3 data-template-id="virtual-stairs-title" class="canva-text text-xl font-bold text-stone-800 mb-2" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">444 Anak Tangga</h3>
+       <p data-template-id="virtual-stairs-desc" class="canva-text text-stone-600" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Rasakan sensasi menuruni tangga menuju kampung adat melalui virtual tour 360° yang imersif.</p>
+      </div>
+     </div>
+     <div class="rounded-2xl overflow-hidden shadow-xl card-hover">
+      <img data-template-id="virtual-house-img" class="canva-image w-full h-64 object-cover" loading="lazy" src="https://images.pexels.com/photos/8178023/pexels-photo-8178023.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Explore traditional bamboo houses in a serene West Java village setting">
+      <div data-template-id="virtual-house-card" class="canva-card p-6" style="background: rgb(255, 255, 255);">
+       <h3 data-template-id="virtual-house-title" class="canva-text text-xl font-bold text-stone-800 mb-2" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">Rumah Adat Tradisional</h3>
+       <p data-template-id="virtual-house-desc" class="canva-text text-stone-600" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Lihat interior rumah panggung bambu dengan atap ijuk yang masih terjaga keasliannya.</p>
+      </div>
+     </div>
+    </div><!-- Audio Book Section -->
+    <h3 data-template-id="audiobook-title" class="canva-text text-2xl font-bold text-stone-800 text-center mb-8" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">Audio Book — Dengarkan Cerita Kampung Naga</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+     <div data-template-id="audio-card-1" class="canva-card rounded-xl p-6 shadow-md card-hover" style="background: rgb(255, 255, 255);">
+      <div class="flex items-center gap-3 mb-3">
+       <button class="audio-play-btn w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700"><i data-lucide="play" style="width:18px;height:18px;"></i></button>
+       <h4 data-template-id="audio-1-title" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Upacara Hajat Sasih</h4>
+      </div>
+      <p data-template-id="audio-1-desc" class="canva-text text-stone-600 text-sm" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Ritual bulanan masyarakat Kampung Naga sebagai wujud syukur kepada Sang Pencipta dan leluhur.</p>
+     </div>
+     <div data-template-id="audio-card-2" class="canva-card rounded-xl p-6 shadow-md card-hover" style="background: rgb(255, 255, 255);">
+      <div class="flex items-center gap-3 mb-3">
+       <button class="audio-play-btn w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700"><i data-lucide="play" style="width:18px;height:18px;"></i></button>
+       <h4 data-template-id="audio-2-title" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Mata Pencaharian</h4>
+      </div>
+      <p data-template-id="audio-2-desc" class="canva-text text-stone-600 text-sm" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Bertani, membuat kerajinan bambu, dan menenun — kehidupan sehari-hari yang harmonis dengan alam.</p>
+     </div>
+     <div data-template-id="audio-card-3" class="canva-card rounded-xl p-6 shadow-md card-hover" style="background: rgb(255, 255, 255);">
+      <div class="flex items-center gap-3 mb-3">
+       <button class="audio-play-btn w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center hover:bg-emerald-700"><i data-lucide="play" style="width:18px;height:18px;"></i></button>
+       <h4 data-template-id="audio-3-title" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Permainan Tradisional</h4>
+      </div>
+      <p data-template-id="audio-3-desc" class="canva-text text-stone-600 text-sm" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Egrang, congklak, dan berbagai permainan anak yang masih lestari di Kampung Naga.</p>
+     </div>
+    </div><!-- Soundscape Gallery -->
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+     <div class="relative rounded-2xl overflow-hidden h-64">
+      <img data-template-id="river-img" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/1005472/pexels-photo-1005472.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Serene stream flowing through lush forest in Indonesia">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900/70 to-transparent flex items-end p-6">
+       <p data-template-id="river-caption" class="canva-text text-white font-medium" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">🎧 Soundscape: Gemercik Sungai Ci Wulan</p>
+      </div>
+     </div>
+     <div class="relative rounded-2xl overflow-hidden h-64">
+      <img data-template-id="ricefield-img" class="canva-image w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/13013188/pexels-photo-13013188.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Lush green rice terraces in Indonesia with mountains in the background">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900/70 to-transparent flex items-end p-6">
+       <p data-template-id="ricefield-caption" class="canva-text text-white font-medium" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">🎧 Soundscape: Angin di Persawahan</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Booking Section -->
+  <section id="booking" data-template-id="booking-section" class="canva-section w-full py-20 px-4" style="background: rgb(245, 245, 244);">
+   <div class="max-w-6xl mx-auto">
+    <h2 data-template-id="booking-title" class="canva-text text-3xl md:text-4xl font-bold text-stone-800 text-center mb-4" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 24px;">Pesan Kunjungan</h2>
+    <p data-template-id="booking-desc" class="canva-text text-stone-600 text-center max-w-2xl mx-auto mb-12" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Reservasi kunjungan, homestay, dan pemandu lokal untuk pengalaman wisata yang terorganisir dan berkelanjutan.</p><!-- Homestays -->
+    <h3 data-template-id="homestay-heading" class="canva-text text-2xl font-bold text-stone-800 mb-6" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">Homestay Warga</h3>
+    <div class="grid md:grid-cols-1 gap-6 mb-12 max-w-md mx-auto">
+     <div class="rounded-xl overflow-hidden shadow-md card-hover bg-white">
+      <img data-template-id="homestay-3-img" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/12326545/pexels-photo-12326545.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Rustic interior featuring a wooden window with patterned curtains and a view of greenery">
+      <div class="p-5">
+       <h4 data-template-id="homestay-3-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Pondok Adat</h4>
+       <p data-template-id="homestay-3-price" class="canva-text text-emerald-700 font-medium mt-1" style="color: rgb(21, 128, 61); font-weight: 600; font-style: normal; font-size: 16px;">Rp 175.000 / malam</p>
+       <p data-template-id="homestay-3-desc" class="canva-text text-stone-600 text-sm mt-2" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Pengalaman menginap paling autentik di rumah adat asli warga.</p>
+      </div>
+     </div>
+    </div><!-- Local Guides -->
+    <h3 data-template-id="guide-heading" class="canva-text text-2xl font-bold text-stone-800 mb-6" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">Pemandu Lokal</h3>
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+     <div class="flex gap-4 bg-white rounded-xl p-5 shadow-md card-hover">
+      <img data-template-id="guide-1-img" class="canva-image w-20 h-20 rounded-full object-cover" loading="lazy" src="https://images.pexels.com/photos/36732027/pexels-photo-36732027.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="A striking portrait of an Indonesian elder with traditional attire in Yogyakarta">
+      <div>
+       <h4 data-template-id="guide-1-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Abah Eman</h4>
+       <p data-template-id="guide-1-desc" class="canva-text text-stone-600 text-sm mt-1" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Sesepuh kampung dengan pengetahuan mendalam tentang sejarah dan tradisi Kampung Naga selama 40 tahun.</p>
+      </div>
+     </div>
+     <div class="flex gap-4 bg-white rounded-xl p-5 shadow-md card-hover">
+      <img data-template-id="guide-2-img" class="canva-image w-20 h-20 rounded-full object-cover" loading="lazy" src="https://images.pexels.com/photos/17403554/pexels-photo-17403554.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Smiling young farmer sitting on a stump in a lush green forest">
+      <div>
+       <h4 data-template-id="guide-2-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Kang Asep</h4>
+       <p data-template-id="guide-2-desc" class="canva-text text-stone-600 text-sm mt-1" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Pemuda lokal yang fasih berbahasa Indonesia dan Sunda, spesialis tur kerajinan dan pertanian.</p>
+      </div>
+     </div>
+    </div><!-- Booking Form -->
+    <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-xl p-8">
+     <h3 data-template-id="form-title" class="canva-text text-xl font-bold text-stone-800 mb-6 text-center" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 19px;">Formulir Reservasi</h3>
+     <form id="booking-form" class="space-y-4">
+      <div>
+       <label data-template-id="form-name-label" for="visitor-name" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Nama Lengkap</label> <input id="visitor-name" data-template-id="form-name-input" type="text" required="" class="canva-input w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" placeholder="Masukkan nama Anda" style="font-weight: 400; font-style: normal; font-size: 16px;">
+      </div>
+      <div>
+       <label data-template-id="form-email-label" for="visitor-email" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Email</label> <input id="visitor-email" data-template-id="form-email-input" type="email" required="" class="canva-input w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" placeholder="email@contoh.com" style="font-weight: 400; font-style: normal; font-size: 16px;">
+      </div>
+      <div>
+       <label data-template-id="form-phone-label" for="visitor-phone" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Nomor Telepon</label> <input id="visitor-phone" data-template-id="form-phone-input" type="tel" class="canva-input w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" placeholder="08xxxxxxxxxx" style="font-weight: 400; font-style: normal; font-size: 16px;">
+      </div>
+      <div>
+       <label data-template-id="form-date-label" for="visit-date" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Tanggal Kunjungan</label> <input id="visit-date" type="date" required="" class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none">
+      </div>
+      <div>
+       <label data-template-id="form-visitors-label" for="num-visitors" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Jumlah Pengunjung</label> <input id="num-visitors" type="number" min="1" max="20" value="1" required="" class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none">
+      </div>
+      <div>
+       <label data-template-id="form-homestay-label" for="homestay-select" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Pilih Homestay (opsional)</label> <select id="homestay-select" class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 outline-none"> <option value="">Tidak perlu homestay</option> <option value="homestay-3">Pondok Adat - Rp 175.000/malam</option> </select>
+      </div>
+      <div>
+       <label data-template-id="form-guide-label" for="guide-select" class="canva-text text-sm font-medium text-stone-700 block mb-1" style="color: rgb(68, 64, 60); font-weight: 500; font-style: normal; font-size: 16px;">Pilih Pemandu (opsional)</label> <select id="guide-select" class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-emerald-500 outline-none"> <option value="">Tidak perlu pemandu</option> <option value="guide-1">Abah Eman</option> <option value="guide-2">Kang Asep</option> </select>
+      </div><button data-template-id="form-submit-btn" type="submit" class="canva-button w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition" style="background: rgb(22, 163, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Kirim Reservasi</button>
+     </form>
+     <div id="form-success" class="hidden text-center py-6">
+      <i data-lucide="check-circle" style="width:48px;height:48px;color:#16a34a;" class="mx-auto mb-3"></i>
+      <p data-template-id="form-success-msg" class="canva-text text-emerald-700 font-bold text-lg" style="color: rgb(21, 128, 61); font-weight: 700; font-style: normal; font-size: 16px;">Reservasi berhasil dikirim! Kami akan menghubungi Anda segera.</p>
+     </div>
+     <div id="form-error" class="hidden text-center py-4">
+      <p class="text-red-600 font-medium" id="form-error-text"></p>
+     </div>
+     <div id="form-loading" class="hidden text-center py-4">
+      <div class="inline-block w-6 h-6 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Panduan Adat Section -->
+  <section id="panduan" class="w-full py-20 px-4 bg-stone-100">
+   <div class="max-w-6xl mx-auto">
+    <h2 data-template-id="panduan-title" class="canva-text text-3xl md:text-4xl font-bold text-stone-800 text-center mb-4" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 24px;">Panduan Adat</h2>
+    <p data-template-id="panduan-desc" class="canva-text text-stone-600 text-center max-w-2xl mx-auto mb-12" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Hormati tradisi dan adat istiadat Kampung Naga. Baca panduan ini sebelum berkunjung.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+     <div>
+      <h3 data-template-id="dos-title" class="canva-text text-xl font-bold text-emerald-700 mb-4 flex items-center gap-2" style="color: rgb(21, 128, 61); font-weight: 700; font-style: normal; font-size: 19px;">Yang Boleh Dilakukan</h3>
+      <ul class="space-y-3">
+       <li data-template-id="do-1" class="canva-text bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✓ Berpakaian sopan dan menutup aurat saat memasuki area kampung</li>
+       <li data-template-id="do-2" class="canva-text bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✓ Meminta izin sebelum memotret warga atau area rumah</li>
+       <li data-template-id="do-3" class="canva-text bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✓ Berbicara dengan suara pelan dan menghormati ketenangan kampung</li>
+       <li data-template-id="do-4" class="canva-text bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✓ Membuang sampah di tempat yang disediakan di luar area kampung</li>
+      </ul>
+     </div>
+     <div>
+      <h3 data-template-id="donts-title" class="canva-text text-xl font-bold text-red-600 mb-4 flex items-center gap-2" style="color: rgb(220, 38, 38); font-weight: 700; font-style: normal; font-size: 19px;">Yang Tidak Boleh Dilakukan</h3>
+      <ul class="space-y-3">
+       <li data-template-id="dont-1" class="canva-text bg-red-50 border border-red-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✗ Dilarang memotret atau memasuki area Bumi Ageung (area suci)</li>
+       <li data-template-id="dont-2" class="canva-text bg-red-50 border border-red-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✗ Dilarang membawa alat elektronik berlebihan ke area inti</li>
+       <li data-template-id="dont-3" class="canva-text bg-red-50 border border-red-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✗ Dilarang menerbangkan drone di atas wilayah kampung</li>
+       <li data-template-id="dont-4" class="canva-text bg-red-50 border border-red-200 rounded-lg p-4 text-stone-700" style="color: rgb(68, 64, 60); font-weight: 400; font-style: normal; font-size: 16px;">✗ Dilarang menyentuh atau memindahkan benda-benda sakral</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section><!-- Kriya Naga (E-Commerce) Section -->
+  <section id="kriya" class="w-full py-20 px-4">
+   <div class="max-w-6xl mx-auto">
+    <h2 data-template-id="kriya-title" class="canva-text text-3xl md:text-4xl font-bold text-stone-800 text-center mb-4" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 24px;">Kriya Naga</h2>
+    <p data-template-id="kriya-desc" class="canva-text text-stone-600 text-center max-w-2xl mx-auto mb-12" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Dukung ekonomi lokal dengan membeli kerajinan tangan asli buatan warga Kampung Naga.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+     <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+      <img data-template-id="craft-1-img" class="canva-image w-full h-56 object-cover" loading="lazy" src="https://images.pexels.com/photos/35201483/pexels-photo-35201483.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A woman in traditional attire skillfully weaving bamboo baskets indoors">
+      <div class="p-5">
+       <h4 data-template-id="craft-1-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Anyaman Bambu</h4>
+       <p data-template-id="craft-1-price" class="canva-text text-emerald-700 font-medium mt-1" style="color: rgb(21, 128, 61); font-weight: 600; font-style: normal; font-size: 16px;">Mulai Rp 50.000</p>
+       <p data-template-id="craft-1-desc" class="canva-text text-stone-600 text-sm mt-2" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Keranjang, boboko, dan wadah tradisional dari bambu pilihan.</p>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+      <img data-template-id="craft-2-img" class="canva-image w-full h-56 object-cover" loading="lazy" src="https://images.pexels.com/photos/28528651/pexels-photo-28528651.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Artisan holding a handcrafted wooden mask">
+      <div class="p-5">
+       <h4 data-template-id="craft-2-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Kerajinan Kayu</h4>
+       <p data-template-id="craft-2-price" class="canva-text text-emerald-700 font-medium mt-1" style="color: rgb(21, 128, 61); font-weight: 600; font-style: normal; font-size: 16px;">Mulai Rp 75.000</p>
+       <p data-template-id="craft-2-desc" class="canva-text text-stone-600 text-sm mt-2" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Ukiran kayu dan pernak-pernik dekoratif karya pengrajin lokal.</p>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+      <img data-template-id="craft-3-img" class="canva-image w-full h-56 object-cover" loading="lazy" src="https://images.pexels.com/photos/34411082/pexels-photo-34411082.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="An artisan practices traditional weaving in a Yogyakarta workshop">
+      <div class="p-5">
+       <h4 data-template-id="craft-3-name" class="canva-text font-bold text-stone-800" style="color: rgb(28, 25, 23); font-weight: 700; font-style: normal; font-size: 16px;">Tenun Tradisional</h4>
+       <p data-template-id="craft-3-price" class="canva-text text-emerald-700 font-medium mt-1" style="color: rgb(21, 128, 61); font-weight: 600; font-style: normal; font-size: 16px;">Mulai Rp 150.000</p>
+       <p data-template-id="craft-3-desc" class="canva-text text-stone-600 text-sm mt-2" style="color: rgb(87, 83, 78); font-weight: 400; font-style: normal; font-size: 16px;">Kain tenun dengan motif khas Sunda yang dibuat secara manual.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Ceremony Photo -->
+  <section class="w-full py-20 px-4 bg-stone-900">
+   <div class="max-w-4xl mx-auto text-center">
+    <img data-template-id="ceremony-img" class="canva-image w-full h-80 object-cover rounded-2xl mb-6" loading="lazy" src="https://images.pexels.com/photos/31875586/pexels-photo-31875586.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="A group of men participate in a traditional Balinese ceremony with offerings outdoors">
+    <h3 data-template-id="ceremony-title" class="canva-text text-2xl font-bold text-white mb-3" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Menjaga Warisan Leluhur</h3>
+    <p data-template-id="ceremony-desc" class="canva-text text-stone-300" style="color: rgb(214, 211, 209); font-weight: 400; font-style: normal; font-size: 16px;">Kampung Naga bukan sekadar destinasi wisata — ia adalah rumah bagi tradisi yang hidup, dijaga oleh 300+ jiwa yang memilih harmoni dengan alam.</p>
+   </div>
+  </section><!-- Footer -->
+  <footer data-template-id="footer-section" class="canva-footer w-full py-10 px-4" style="background: rgb(28, 25, 23);">
+   <div class="max-w-6xl mx-auto text-center">
+    <p data-template-id="footer-text" class="canva-text text-stone-400" style="color: rgb(120, 113, 108); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 Kampung Naga Digital Tourism. Dibuat untuk pelestarian budaya dan pariwisata berkelanjutan.</p>
+   </div>
+  </footer>
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Capacity simulation
+    const dailyVisitors = Math.floor(Math.random() * 400) + 50;
+    document.getElementById('visitor-count').textContent = dailyVisitors;
+    const light = document.getElementById('traffic-light');
+    const status = document.getElementById('capacity-status');
+    if (dailyVisitors >= 500) {
+        light.className = 'w-5 h-5 rounded-full bg-red-500 capacity-pulse';
+        status.textContent = 'Kuota penuh hari ini';
+        status.className = 'text-red-400 text-sm mt-2';
+    } else if (dailyVisitors >= 300) {
+        light.className = 'w-5 h-5 rounded-full bg-yellow-400 capacity-pulse';
+        status.textContent = 'Kuota hampir penuh';
+        status.className = 'text-yellow-400 text-sm mt-2';
+    }
+
+    // Data SDK
+    let bookings = [];
+    const dataHandler = {
+        onDataChanged(data) {
+            bookings = data;
+        }
+    };
+
+    (async () => {
+        const initResult = await window.dataSdk.init(dataHandler);
+        if (!initResult.isOk) {
+            console.error('Data SDK init failed');
+        }
+    })();
+
+    // Booking form
+    document.getElementById('booking-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const loading = document.getElementById('form-loading');
+        const success = document.getElementById('form-success');
+        const error = document.getElementById('form-error');
+
+        form.classList.add('hidden');
+        loading.classList.remove('hidden');
+        success.classList.add('hidden');
+        error.classList.add('hidden');
+
+        if (bookings.length >= 999) {
+            loading.classList.add('hidden');
+            form.classList.remove('hidden');
+            error.classList.remove('hidden');
+            document.getElementById('form-error-text').textContent = 'Maaf, sistem reservasi sudah penuh. Silakan coba lagi nanti.';
+            return;
+        }
+
+        const record = {
+            visitor_name: document.getElementById('visitor-name').value,
+            visitor_email: document.getElementById('visitor-email').value,
+            visitor_phone: document.getElementById('visitor-phone').value,
+            visit_date: document.getElementById('visit-date').value,
+            num_visitors: parseInt(document.getElementById('num-visitors').value),
+            homestay_id: document.getElementById('homestay-select').value,
+            guide_id: document.getElementById('guide-select').value,
+            booking_type: 'visit',
+            created_at: new Date().toISOString()
+        };
+
+        const result = await window.dataSdk.create(record);
+        loading.classList.add('hidden');
+
+        if (result.isOk) {
+            success.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                success.classList.add('hidden');
+                form.classList.remove('hidden');
+            }, 4000);
+        } else {
+            form.classList.remove('hidden');
+            error.classList.remove('hidden');
+            document.getElementById('form-error-text').textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+        }
+    });
+
+    // Set min date for booking
+    const dateInput = document.getElementById('visit-date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    lucide.createIcons();
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a02a605088c28bc7',t:'MTc3OTk0MTA3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
